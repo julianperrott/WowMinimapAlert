@@ -1,5 +1,4 @@
-﻿using log4net;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
@@ -11,8 +10,6 @@ namespace MinimapAlert
     public class SearchForNode : INodeFinder, IImageProvider
     {
         private readonly IPixelClassifier pixelClassifier;
-
-        private static ILog logger = LogManager.GetLogger("Fishbot");
 
         private Bitmap bitmap = new Bitmap(1, 1);
 
@@ -66,7 +63,7 @@ namespace MinimapAlert
 
             if (points.Count > 100)
             {
-                logger.Error("Error: Too much yellow in this image, adjust the configuration !");
+                System.Diagnostics.Debug.WriteLine("Error: Too much yellow in this image, adjust the configuration !");
                 points.Clear();
             }
 

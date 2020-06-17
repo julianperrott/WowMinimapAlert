@@ -1,12 +1,9 @@
-﻿using log4net;
-using System;
+﻿using System;
 
 namespace MinimapAlert
 {
     public class PixelClassifier : IPixelClassifier
     {
-        private static ILog logger = LogManager.GetLogger("NodeBot");
-
         public int MaxBlue { get; set; } = 34;
 
         public int MinRedGreen { get; set; } = 176;
