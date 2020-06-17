@@ -25,19 +25,21 @@ https://www.youtube.com/watch?v=WKOcWFG1hNQ
 https://dotnet.microsoft.com/download/dotnet-framework
 * The bot: Compile the source and run it from visual studio 2019.
 
-## Setup
+## Configuring the capture window
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/julianperrott/WowMinimapAlert/master/Images/Setup.png" alt="Setup"/>
 </p>
 
-Click on the yellow configure button.
+1. Click on the yellow configure button.
 
-Click on the yellow capture screen button.
+2. Click on the yellow capture screen button.
 
-Then adjust the capture X,Y and the width and height so that only the centre of the minimap is visible. You probably should then change the values hard coded in WowMinimapAlert\Source\MnmimapAlertBot\Platform\WowScreen.cs.
+3. Now adjust the capture X,Y and the width and height so that only the centre of the minimap is visible. You probably should then change the values hard coded in WowMinimapAlert\Source\MnmimapAlertBot\Platform\WowScreen.cs.
 
-Any yellow in the minimap is shown in red. Note: Any addons which display yellow in the minimap need to be turned off so they don't interfere.
+Any yellow in the minimap is shown in red and this is what triggers the wav to be played.
+
+Note: Any addons which display yellow in the minimap need to be turned off so they don't interfere.
 
 ## Running
 
