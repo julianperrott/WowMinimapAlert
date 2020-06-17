@@ -2,16 +2,13 @@
 
 namespace MinimapAlert
 {
-    using log4net.Appender;
-    using log4net.Core;
-    using log4net.Repository.Hierarchy;
     using System;
     using System.Collections.ObjectModel;
     using System.Timers;
     using System.Windows;
     using System.Windows.Controls;
 
-    public partial class MainWindow : Window, IAppender
+    public partial class MainWindow : Window
     {
         public ObservableCollection<LogEntry> LogEntries { get; set; }
 
@@ -26,8 +23,6 @@ namespace MinimapAlert
         {
             InitializeComponent();
 
-            ((Logger)NodeBot.logger.Logger).AddAppender(this);
-
             this.DataContext = LogEntries = new ObservableCollection<LogEntry>();
             this.pixelClassifier = new PixelClassifier();
 
@@ -40,8 +35,6 @@ namespace MinimapAlert
             }
 
             this.WindowSizeChangedTimer = new Timer { AutoReset = false, Interval = 100 };
-            this.WindowSizeChangedTimer.Elapsed += SizeChangedTimer_Elapsed;
-            this.CardGrid.SizeChanged += MainWindow_SizeChanged;
             this.Closing += (s, e) => botThread?.Abort();
         }
 
@@ -52,32 +45,9 @@ namespace MinimapAlert
             WindowSizeChangedTimer.Start();
         }
 
-        private void SizeChangedTimer_Elapsed(object sender, ElapsedEventArgs e)
-        {
-            this.Dispatch(() =>
-            {
-                this.LogGrid.Height = this.LogFlipper.ActualHeight;
-                this.GraphFlipper.IsFlipped = true;
-                this.LogFlipper.IsFlipped = true;
-                this.GraphFlipper.IsFlipped = false;
-                this.LogFlipper.IsFlipped = false;
-            });
-        }
-
         private void Stop_Click(object sender, RoutedEventArgs e) => bot?.Stop();
 
         private void Settings_Click(object sender, RoutedEventArgs e) => new ColourConfiguration(this.pixelClassifier).Show();
-
-        public void DoAppend(LoggingEvent loggingEvent)
-        {
-            Dispatch(() =>
-                LogEntries.Insert(0, new LogEntry()
-                {
-                    DateTime = DateTime.Now,
-                    Message = loggingEvent.RenderedMessage
-                })
-            );
-        }
 
         private void SetImageVisibility(Image imageForVisible, Image imageForCollapsed, bool state)
         {
