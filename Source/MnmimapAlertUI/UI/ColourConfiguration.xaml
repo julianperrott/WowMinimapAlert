@@ -1,0 +1,85 @@
+﻿<Window x:Class="MinimapAlert.ColourConfiguration" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:MinimapAlert" Icon="/MinimapAlert;component/Resources/MinimapAlert.ico" mc:Ignorable="d" Title="Colour Explorer" Height="450" Width="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="132*" />
+            <ColumnDefinition Width="132*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Left Hand Image -->
+        <Grid Grid.ColumnSpan="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+        </Grid>
+
+        <!-- X -->
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock TextWrapping="WrapWithOverflow" Text="Capture X" Margin="10" Width="100" />
+                <Button Content="-" Click="XMinus_Click" />
+                <TextBox Padding="10 0 0 0" Text="{Binding ScreenX}" Width="100" />
+                <Button Content="+" Click="XPlus_Click" />
+            </StackPanel>
+
+            <!-- Y -->
+            <StackPanel Orientation="Horizontal">
+                <TextBlock TextWrapping="WrapWithOverflow" Text="Capture Y" Margin="10" Width="100" />
+                <Button Content="-" Click="YMinus_Click" />
+                <TextBox Padding="10 0 0 0" Text="{Binding ScreenY}" Width="100" />
+                <Button Content="+" Click="YPlus_Click" />
+            </StackPanel>
+
+            <!-- Width -->
+            <StackPanel Orientation="Horizontal">
+                <TextBlock TextWrapping="WrapWithOverflow" Text="Capture Width" Margin="10" Width="100" />
+                <Button Content="-" Click="WidthMinus_Click" />
+                <TextBox Padding="10 0 0 0" Text="{Binding ScreenWidth}" Width="100" />
+                <Button Content="+" Click="WidthPlus_Click" />
+            </StackPanel>
+
+            <!-- Width -->
+            <StackPanel Orientation="Horizontal">
+                <TextBlock TextWrapping="WrapWithOverflow" Text="Capture Height" Margin="10" Width="100" />
+                <Button Content="-" Click="HeightMinus_Click" />
+                <TextBox Padding="10 0 0 0" Text="{Binding ScreenHeight}" Width="100" />
+                <Button Content="+" Click="HeightPlus_Click" />
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Right Hand Image -->
+        <Image Grid.Column="1" Margin="5 0 5 0" Name="WowScreenshot" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="/Chrome;component/Resources/MinimapAlert.png" />
+
+        <!-- Bottom Left Sliders -->
+        <Grid Grid.Row="1" Margin="5 5 0 0" Grid.ColumnSpan="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0">
+                <TextBlock TextWrapping="WrapWithOverflow" Name="MaxBlueText" Text="Label goes here" />
+                <Slider Margin="20 0 00 10" Foreground="Blue" ValueChanged="MaxBlue_ValueChanged" Minimum="0" Maximum="255" Orientation="Horizontal" TickFrequency="25" Value="{Binding MaxBlue}" Thumb.DragCompleted="Slider_DragCompleted" TickPlacement="BottomRight" />
+            </StackPanel>
+
+            <StackPanel Grid.Row="1">
+                <TextBlock TextWrapping="WrapWithOverflow" Name="MinRedGreenText" Text="Label goes here" />
+                <Slider Margin="20 0 10 20" Foreground="Blue" ValueChanged="MinRedGreen_ValueChanged" Minimum="0" Maximum="255" Orientation="Horizontal" TickFrequency="25" Value="{Binding MinRedGreen}" Thumb.DragCompleted="Slider_DragCompleted" TickPlacement="BottomRight" />
+            </StackPanel>
+        </Grid>
+
+        <!-- Bottom Right Button -->
+        <Button Click="Capture_Click" Content="Capture Screen" Grid.Column="2" Grid.Row="1" Width="150" Height="30" Margin="123,42,123,43" />
+    </Grid>
+</Window>
