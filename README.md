@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/julianperrott/WowMinimapAlert/master/images/starme.png" alt="Star this Repo"/>
+  <img src="https://raw.githubusercontent.com/julianperrott/WowMinimapAlert/master/Images/starme.png" alt="Star this Repo"/>
 </p>
 
 
@@ -28,7 +28,7 @@ https://dotnet.microsoft.com/download/dotnet-framework
 ## Setup
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/julianperrott/WowMinimapAlert/master/images/Setup.png" alt="Setup"/>
+  <img src="https://raw.githubusercontent.com/julianperrott/WowMinimapAlert/master/Images/Setup.png" alt="Setup"/>
 </p>
 
 Click on the yellow configure button.
