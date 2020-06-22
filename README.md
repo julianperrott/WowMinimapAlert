@@ -15,9 +15,9 @@ How is this useful:
 
 ## Video of the app in action
 
-https://www.youtube.com/watch?v=WKOcWFG1hNQ
+https://youtu.be/sbQqBDAjM1I
 
-[![Wow Mini Map Alert](https://img.youtube.com/vi/WKOcWFG1hNQ/0.jpg)](https://www.youtube.com/watch?v=WKOcWFG1hNQ)
+[![Wow Mini Map Alert](https://img.youtube.com/vi/sbQqBDAjM1I/0.jpg)](https://www.youtube.com/watch?v=sbQqBDAjM1I)
 
 ## Build
 
