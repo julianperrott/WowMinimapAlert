@@ -36,7 +36,7 @@ https://dotnet.microsoft.com/download/dotnet-framework
 
 1. Click on the yellow configure button.
 
-2. Click on the yellow capture screen button.
+2. Click on the capture screen button.
 
 3. Now adjust the capture X,Y and the width and height so that only the centre of the minimap is visible. You probably should then change the values hard coded in WowMinimapAlert\Source\MnmimapAlertBot\Platform\WowScreen.cs.
 
