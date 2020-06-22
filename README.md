@@ -19,6 +19,9 @@ https://youtu.be/sbQqBDAjM1I
 
 [![Wow Mini Map Alert](https://img.youtube.com/vi/sbQqBDAjM1I/0.jpg)](https://www.youtube.com/watch?v=sbQqBDAjM1I)
 
+https://www.youtube.com/watch?v=3pKHHgMbiC4
+[![Wow Mini Map Alert](https://img.youtube.com/vi/3pKHHgMbiC4/0.jpg)](https://www.youtube.com/watch?v=3pKHHgMbiC4)
+
 ## Build
 
 * Requires: Dot net framework 4.7
