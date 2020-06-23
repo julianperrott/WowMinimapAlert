@@ -4,7 +4,7 @@
 
 
 # WowMinimapAlert
-This is a little utility which alerts you by playing an wav file when a hern/mining node is visible on the World of Warcraft minimap.
+This is a little utility which alerts you by playing an wav file when a herb/mining node is visible on the World of Warcraft minimap.
 
 When it is running it looks at the portion of the screen where the minimap is and if it sees any yellow (the colour of a node) then it will alert you.
 
